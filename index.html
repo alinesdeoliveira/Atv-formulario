@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+<title> Atv_Formulario </title>
+<meta charset="utf-8" />
+</head>
+
+<body background="img/fundo.jpg" face="calibri">
+
+    <h1 align="center"> <strong> CIDADELA BURGUER </h1>
+        
+        <fieldset>
+     <table border="1" width="700" align="center" cellpadding="2"  bgcolor="#e6fff7" </table>
+     <tr><td>
+        <legend align="center">CADASTRO DO CARDÁPIO</legend>
+        <form action="enviar.php" method="post" name="cadastro">
+            <br>
+            <table align="center" border="2 ">
+
+                <tr><td><label> Tipo(s): </label></td>
+                    <td><label><input type="checkbox" id="tipo" name="tipo" value="artesanal" />Artesanal </label>
+                    <label> <input type="checkbox" id="tipo" name="tipo" value="tradicional" /> Tradicional </label>
+                    <label> <input type="checkbox" id="tipo" name="tipo" value="combo" /> Combo </label></td>
+                    </tr>
+                <tr>
+                    <td><label> Código: </label></td>
+                    <td><input type="number" id="cod" name="cod" size="30" maxlength="50" placeholder="Digite o codigo do prato:" required /> </td>
+                    </tr>
+                    <tr>
+                        <td><label>Senha:</label></td>
+                        <td><input type="password" id="senha" name="senha"maxlength="6" size="6" required /></td>
+                        </tr>
+                        <tr>
+                            <td> <label>Tipo de pão </label> </td> 
+                            <td><select name="pao" id="pao" required> 
+                              <option value="" selected="selected">--Selecione--</option>
+                              
+                        <option value="brioche">Brioche</option>
+                        <option value="gergilim">Gergilim</option>
+                        <option value="artesanal">Artesanal</option>
+                    </tr>               
+                 <tr>
+                    <td><label> Ingredientes: </label></td>
+                    <td><textarea id="ingredientes" name="ingredientes" cols="40" rows="6" maxlength="100" placeholder="Escreva os ingredientes, no máximo 100 caracteres"></textarea></td>
+                </tr>  
+                <tr>
+                    <td><label> Preparo: </label></td>
+                    <td><textarea id="preparo" name="preparo" cols="40" rows="10" maxlength="240" placeholder="Detalhe o modo de preparo com no máximo 240 caracteres"></textarea></td>
+                </tr>                   
+                <tr>
+                    <td><label> Data de cadastro:</label></td>
+                    <td><input type="date" id="data_nasc" name="data_nasc" min="2021-01-01" max="2024-07-07" /></td>
+                </tr>
+                <tr>
+                    <td><label> Valor CMV</label></td>
+                    <td><input type="number" id="cmv" name="cmv" maxlength="4" size="15" required  ></td>     
+                </tr>
+                <tr>
+                    <td><label> Lucro desejado</label></td>
+                    <td><input type="number" id="lucro" name="lucro" maxlength="4" size="15" required ></td>     
+                </tr>  
+                <tr>
+                    <td><label>Valor de Venda</label></td>
+                    <td><input type="number" id="valor" name="valor" maxlength="4" size="15"required  ></td>     
+                </tr> 
+                <tr>
+                    <td><label>Iniciar vendas teste em</label></td>
+                    <td><input type="datetime-local" id="vteste" name="vteste"></td>     
+                </tr> 
+                <tr>
+                    <td><label>Finalizar vendas teste</label></td>
+                    <td><input type="datetime-local" id="fteste" name="fteste" ></td>     
+                </tr>
+                <tr>
+                <td><label> Link do cadastro no app de venda: </label></td>
+                     <td> <input type="url" name="site" name="site"/></td>
+                    </tr>
+                <tr>
+                    <td><label> Anexar(se necessário): </label></td>
+                    <td><input type="file" id="fanexo" name="fanexo" /></td>
+                    </tr>
+                    <tr>
+                    <th colspan="2">
+                    <input type="submit" id="enviar" name="enviar" value="ENVIAR" />
+                    <input type="reset" id="limpar" name="limpar" value="LIMPAR" />
+                    <br /><br />
+                    </tr></th> 
+                <tr>
+                    <td><label>Caso combo, qtd hambúrgueres: </label></td>
+                    <td><input type="number" name="cont" id="cont" min="1" max="6"/></td>
+                </tr>  
+                <tr>
+                    <td><label> Embalagem temática: </label></td>
+                    <td><label><input type="radio" id="embalagem" name="embalagem" value="embalagem">SIM </label>
+                    <label> <input type="radio" id="embalagem" name="embalagem" value="embalagem"> NÃO </label></td>
+                </tr> 
+                <tr>
+                    <td><label> Selecione cor da embalagem: </label></td>
+                    <td> <input type="color" name="cor" id="cor"/></td>
+                </tr></table>
+
+                <fieldset>
+                </fieldset>
+                <br><br><br>
+                    <fieldset>
+                        <table border="1" width="700" align="center" bgcolor="pink" cellpadding="2"  </table>
+
+                <tr>
+                    <h2> Resultado: </h2>
+                    <td><label> Nome: </label></td>
+                    <td><input type="text" id="nome" name="nome" size="30" maxlength="100" placeholder="Digite o nome do prato:" required /> </td>
+                    </tr>
+                    <tr>
+                        <td><label> Anexar foto do prato: </label></td>
+                        <td><input type="file" id="ianexo" name="ianexo" /></td>
+                        </tr>
+                        <tr>
+                        <th colspan="2">
+                        <input type="submit" id="ienviar" name="ienviar" value="ENVIAR" />
+                        <input type="reset" id="ilimpar" name="ilimpar" value="LIMPAR" />
+                        </tr></th> 
+                        <tr>
+                            <td><label>Valor Total</label></td>
+                            <td><input type="number" id="valor" name="valor" maxlength="4" size="15"required  ></td>     
+                        </tr> 
+
+                </fieldset>
+
+                </tr></td>
+
+
+            </strong>
+            </table>
+
+
+        </form>
+    </fieldset>
+</body>
+</html>
